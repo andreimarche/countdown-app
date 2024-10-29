@@ -26,7 +26,10 @@ export class CountDownComponent {
 
   constructor() {
     this.eventTitle = localStorage.getItem('eventTitle') ?? 'my event'
-    this.eventDate = new Date(localStorage.getItem('eventDate') ?? Date.now())
+    let currentDate = new Date()
+    this.eventDate = new Date(
+      localStorage.getItem('eventDate') ?? currentDate.setDate(currentDate.getDate() + 3),
+    )
     this.timeLeft$ = interval(1000).pipe(
       map(() => {
         if (this.eventDate.getTime() < Date.now()) {
