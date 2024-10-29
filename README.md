@@ -12,6 +12,10 @@ Run it locally:
 
 Navigate to http://localhost:4200/
 
+## Live page
+
+Deployed live with Vercel, visit https://countdown-app-bay.vercel.app/ 
+
 ## Suggestions for improvements
 
 * Feature: "Change timezone" - example use case: show countdown to New Years Eve in a city across the planet where your relative lives!
